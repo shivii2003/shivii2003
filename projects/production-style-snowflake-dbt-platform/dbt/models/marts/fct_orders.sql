@@ -12,13 +12,15 @@ select
     order_timestamp,
     order_amount,
     ingested_at as source_ingested_at,
+    loaded_at as warehouse_loaded_at,
     current_timestamp() as transformed_at
 from {{ ref('stg_orders') }}
 
 {% if is_incremental() %}
-where ingested_at >= (
+-- Use warehouse load time so late-arriving source updates are not skipped.
+where loaded_at >= (
     select dateadd(
-        minute, -30, coalesce(max(source_ingested_at), '1900-01-01'::timestamp_tz)
+        minute, -30, coalesce(max(warehouse_loaded_at), '1900-01-01'::timestamp_tz)
     )
     from {{ this }}
 )
