@@ -39,3 +39,6 @@ python quality/run_checks.py --input sample/events.jsonl --report reports/qualit
 
 ## Extension roadmap
 Integrate Snowflake query history, dbt test artifacts, alert routing, and an orchestration layer such as Airflow or Dagster.
+
+## Connect
+[LinkedIn — Shivam Mathur](https://www.linkedin.com/in/shivam-mathur-172751289)
