@@ -82,3 +82,5 @@ No credentials are committed. Snowflake and AWS execution require your own accou
 - Add deployment environments and protected approvals.
 - Add orchestration with a JD-relevant scheduler after confirming tool access.
 
+## Connect
+[LinkedIn — Shivam Mathur](https://www.linkedin.com/in/shivam-mathur-172751289)
