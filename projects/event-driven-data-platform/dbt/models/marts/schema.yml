@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: Incremental order event fact table.
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+      - name: event_type
+        tests:
+          - accepted_values:
+              values: ['ORDER_CREATED', 'ORDER_UPDATED', 'ORDER_CANCELLED']
