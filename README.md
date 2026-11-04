@@ -14,6 +14,7 @@ I build and work with data engineering solutions using **Snowflake, dbt, Python,
 
 ## Featured Data Engineering Portfolio
 
+- [Event-Driven Data Platform](projects/event-driven-data-platform/README.md) — Python event validation, idempotent processing, dead-letter handling, Snowflake MERGE pattern, dbt incremental models, and unit tests.
 - [Production-Style Snowflake + dbt Data Platform](projects/production-style-snowflake-dbt-platform/README.md) — API ingestion, Snowflake RAW design, incremental dbt models, SCD Type 2, Airflow reference orchestration, and CI.
 - [End-to-End Data Engineering Platform](projects/cisco-data-engineering-platform/README.md) — Python API ingestion, Snowflake warehouse design, dbt transformations, and CI.
 - [Snowflake + dbt Analytics Engineering](projects/snowflake-dbt-analytics-engineering/README.md) — dbt staging and mart layers, incremental MERGE model, source freshness, and schema tests.
