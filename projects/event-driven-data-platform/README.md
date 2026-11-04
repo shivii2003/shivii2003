@@ -1,5 +1,7 @@
 # Event-Driven Data Platform — Portfolio Project
 
+[![Tests](https://github.com/shivii2003/shivii2003/actions/workflows/event-platform-tests.yml/badge.svg)](https://github.com/shivii2003/shivii2003/actions/workflows/event-platform-tests.yml)
+
 > Independent engineering case study. This is a local, testable reference implementation, not a production client deployment.
 
 ## Scenario
@@ -35,7 +37,8 @@ BI / downstream consumers
 - Append-only JSONL sink for replayable local development
 - Snowflake DDL and MERGE pattern for warehouse ingestion
 - dbt staging model and incremental fact model
-- Unit tests for valid, invalid, duplicate and replayed events
+- Unit tests for valid, invalid, duplicate and replayed events, plus JSONL I/O edge cases
+- Pytest coverage reporting in local runs and GitHub Actions
 
 ## Run locally
 Requires Python 3.11+.
@@ -65,7 +68,7 @@ The local pipeline writes accepted records to `build/accepted.jsonl` and invalid
 - `dbt/`: source, staging and mart models
 
 ## Validation status
-The local Python implementation and unit tests are provided for execution. Snowflake and dbt require a separately configured development account and have not been run from this repository environment.
+The Python unit-test suite and coverage reporting are configured in GitHub Actions. Check the workflow badge above for the live run result; a green badge is required before describing the CI as passing. Snowflake and dbt require a separately configured development account and have not been run from this repository environment.
 
 ## Design notes
 - Never treat a duplicate event as a new business transaction.
