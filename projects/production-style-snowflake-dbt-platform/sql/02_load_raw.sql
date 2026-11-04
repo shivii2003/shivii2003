@@ -1,0 +1,16 @@
+-- Replace the stage name only after creating the external stage and integration.
+-- COPY INTO ANALYTICS.RAW.ORDER_EVENTS
+--   (PAYLOAD, INGESTED_AT, RUN_ID, SOURCE_NAME, SOURCE_FILE)
+-- FROM (
+--   SELECT
+--     $1:record,
+--     $1:_ingested_at::TIMESTAMP_TZ,
+--     $1:_run_id::STRING,
+--     $1:_source::STRING,
+--     METADATA$FILENAME
+--   FROM @ANALYTICS.RAW.ORDERS_STAGE
+-- )
+-- FILE_FORMAT = (FORMAT_NAME = ANALYTICS.RAW.JSONL_FORMAT)
+-- ON_ERROR = 'ABORT_STATEMENT';
+
+-- Idempotent downstream deduplication is handled in dbt using business key + source load timestamp.
