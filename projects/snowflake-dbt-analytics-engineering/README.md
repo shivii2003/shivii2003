@@ -59,3 +59,6 @@ Never commit credentials, private datasets, or production connection details.
 
 ## Next enhancements
 Add Snowflake query-history monitoring, cost-aware warehouse sizing, deployment environments, and CI jobs against a non-production account.
+
+## Connect
+[LinkedIn — Shivam Mathur](https://www.linkedin.com/in/shivam-mathur-172751289)
