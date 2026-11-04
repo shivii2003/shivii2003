@@ -1,0 +1,23 @@
+name: data-engineering-ci
+
+on:
+  push:
+    paths:
+      - "projects/cisco-data-engineering-platform/**"
+  pull_request:
+    paths:
+      - "projects/cisco-data-engineering-platform/**"
+
+jobs:
+  python-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/cisco-data-engineering-platform
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: PYTHONPATH=. pytest -q
