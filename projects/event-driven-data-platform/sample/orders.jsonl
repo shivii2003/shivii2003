@@ -1,0 +1,4 @@
+{"event_id":"evt-1001","order_id":"ord-1001","customer_id":"cust-7","event_type":"ORDER_CREATED","amount":"1299.50","currency":"INR","event_timestamp":"2026-10-10T10:30:00+00:00"}
+{"event_id":"evt-1002","order_id":"ord-1002","customer_id":"cust-8","event_type":"ORDER_CREATED","amount":"799.00","currency":"INR","event_timestamp":"2026-10-10T10:35:00+00:00"}
+{"event_id":"evt-1002","order_id":"ord-1002","customer_id":"cust-8","event_type":"ORDER_UPDATED","amount":"899.00","currency":"INR","event_timestamp":"2026-10-10T10:36:00+00:00"}
+{"event_id":"evt-1003","order_id":"ord-1003","customer_id":"cust-9","event_type":"ORDER_CREATED","amount":"-10","currency":"INR","event_timestamp":"2026-10-10T10:40:00+00:00"}
