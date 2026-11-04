@@ -68,6 +68,8 @@ The local pipeline writes accepted records to `build/accepted.jsonl` and invalid
 - `dbt/`: source, staging and mart models
 
 ## Validation status
+- Local execution check: 12 targeted validation and JSONL I/O scenarios passed during review (normalisation, required fields, invalid amounts, duplicate IDs, invalid event types, timezone enforcement, JSONL round-trip, blank lines, malformed JSON line reporting and non-object payload rejection).
+- This manual check is not a substitute for the committed pytest suite or a successful GitHub Actions run.
 The Python unit-test suite and coverage reporting are configured in GitHub Actions. Check the workflow badge above for the live run result; a green badge is required before describing the CI as passing. Snowflake and dbt require a separately configured development account and have not been run from this repository environment.
 
 ## Design notes
