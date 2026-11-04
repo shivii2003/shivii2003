@@ -12,6 +12,10 @@ I build and work with data engineering solutions using **Snowflake, dbt, Python,
 - **Data Engineering:** ETL/ELT, batch ingestion, transformations, data validation
 - **Tools & Practices:** Git, GitHub, Docker, documentation, debugging
 
+## Featured Data Engineering Portfolio
+
+- [End-to-End Data Engineering Platform](projects/cisco-data-engineering-platform/README.md) — Python API ingestion, Snowflake warehouse design, dbt transformations, data quality and GitHub Actions CI.
+
 ## Selected Work
 
 | Repository | What it contains |
