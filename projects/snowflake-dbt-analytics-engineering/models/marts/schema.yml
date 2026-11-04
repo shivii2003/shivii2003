@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "One row per order; latest source version wins."
+    columns:
+      - name: order_id
+        description: "Business key for an order."
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+      - name: order_status
+        tests:
+          - accepted_values:
+              values: ['NEW', 'PROCESSING', 'SHIPPED', 'DELIVERED', 'CANCELLED']
