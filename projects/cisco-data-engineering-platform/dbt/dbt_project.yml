@@ -1,0 +1,11 @@
+name: cisco_data_engineering_platform
+version: "1.0.0"
+config-version: 2
+profile: cisco_data_engineering_platform
+model-paths: ["models"]
+models:
+  cisco_data_engineering_platform:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
