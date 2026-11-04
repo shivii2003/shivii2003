@@ -88,3 +88,6 @@ Source code and configuration are committed as a portfolio example. A live Snowf
 - Add dbt unit tests and CI against a disposable warehouse
 - Add alerting integration and operational SLO dashboards
 - Add Terraform for repeatable infrastructure provisioning
+
+## Connect
+[LinkedIn — Shivam Mathur](https://www.linkedin.com/in/shivam-mathur-172751289)
