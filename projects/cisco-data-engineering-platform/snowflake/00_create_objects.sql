@@ -1,0 +1,25 @@
+-- Run in a development Snowflake account; adjust naming/warehouse sizing to your standards.
+CREATE DATABASE IF NOT EXISTS PORTFOLIO_DW;
+CREATE SCHEMA IF NOT EXISTS PORTFOLIO_DW.RAW;
+CREATE SCHEMA IF NOT EXISTS PORTFOLIO_DW.ANALYTICS;
+
+CREATE TABLE IF NOT EXISTS PORTFOLIO_DW.RAW.API_EVENTS (
+    EVENT_ID       VARCHAR NOT NULL,
+    SOURCE_SYSTEM  VARCHAR NOT NULL,
+    PAYLOAD        VARIANT NOT NULL,
+    INGESTED_AT    TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP()
+);
+
+-- Example idempotent load pattern after staging JSONL into a VARIANT-compatible stage.
+-- MERGE INTO PORTFOLIO_DW.RAW.API_EVENTS target
+-- USING (SELECT $1:event_id::VARCHAR AS event_id,
+--               $1:source_system::VARCHAR AS source_system,
+--               $1:payload AS payload
+--        FROM @PORTFOLIO_DW.RAW.API_LANDING_STAGE) source
+-- ON target.EVENT_ID = source.EVENT_ID
+-- WHEN MATCHED THEN UPDATE SET
+--   SOURCE_SYSTEM = source.SOURCE_SYSTEM,
+--   PAYLOAD = source.PAYLOAD,
+--   INGESTED_AT = CURRENT_TIMESTAMP()
+-- WHEN NOT MATCHED THEN INSERT (EVENT_ID, SOURCE_SYSTEM, PAYLOAD)
+-- VALUES (source.EVENT_ID, source.SOURCE_SYSTEM, source.PAYLOAD);
