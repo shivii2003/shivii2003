@@ -46,3 +46,20 @@ def test_invalid_event_type_is_rejected():
     result = validate_event(event(event_type="UNKNOWN"))
     assert not result.accepted
     assert result.reason == "invalid_event_type"
+
+def test_timestamp_without_timezone_is_rejected():
+    result = validate_event(event(event_timestamp="2026-10-10T10:30:00"))
+    assert not result.accepted
+    assert result.reason == "timestamp_timezone_required"
+
+
+def test_invalid_amount_is_rejected():
+    result = validate_event(event(amount="not-a-number"))
+    assert not result.accepted
+    assert result.reason == "invalid_amount"
+
+
+def test_empty_required_string_is_rejected():
+    result = validate_event(event(order_id="  "))
+    assert not result.accepted
+    assert result.reason == "invalid_order_id"
