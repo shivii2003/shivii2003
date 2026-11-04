@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Incremental order fact; one current row per order business key."
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+      - name: order_status
+        tests:
+          - accepted_values:
+              values: ['NEW', 'PROCESSING', 'SHIPPED', 'DELIVERED', 'CANCELLED']
+  - name: dim_customers
+    description: "Customer history with effective validity intervals."
+    columns:
+      - name: customer_id
+        tests: [not_null]
