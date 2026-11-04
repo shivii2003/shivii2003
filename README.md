@@ -1,5 +1,7 @@
 # Hi, I'm Shivam Mathur 👋
 
+[![Event Platform CI](https://github.com/shivii2003/shivii2003/actions/workflows/event-platform-tests.yml/badge.svg)](https://github.com/shivii2003/shivii2003/actions/workflows/event-platform-tests.yml)
+
 **Software Engineer at HCLTech | Data Engineering**
 
 Data engineering professional with hands-on experience across **Python, Advanced SQL, Snowflake, dbt, ETL/ELT, REST APIs and microservices**. Interested in building reliable ingestion, transformation, data-quality and cloud data workflows.
