@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: raw
+    database: PORTFOLIO_DW
+    schema: RAW
+    tables:
+      - name: api_events
+        description: Raw API events landed by the Python ingestion pipeline.
+        columns:
+          - name: event_id
+            tests:
+              - not_null
