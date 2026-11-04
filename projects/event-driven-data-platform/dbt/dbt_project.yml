@@ -1,0 +1,11 @@
+name: event_driven_warehouse
+version: '1.0.0'
+config-version: 2
+profile: event_driven_warehouse
+model-paths: ["models"]
+models:
+  event_driven_warehouse:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
