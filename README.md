@@ -14,11 +14,12 @@ I build and work with data engineering solutions using **Snowflake, dbt, Python,
 
 ## Featured Data Engineering Portfolio
 
+- [Production-Style Snowflake + dbt Data Platform](projects/production-style-snowflake-dbt-platform/README.md) — API ingestion, Snowflake RAW design, incremental dbt models, SCD Type 2, Airflow reference orchestration, and CI.
 - [End-to-End Data Engineering Platform](projects/cisco-data-engineering-platform/README.md) — Python API ingestion, Snowflake warehouse design, dbt transformations, and CI.
 - [Snowflake + dbt Analytics Engineering](projects/snowflake-dbt-analytics-engineering/README.md) — dbt staging and mart layers, incremental MERGE model, source freshness, and schema tests.
 - [Data Engineering Quality & Observability](projects/data-engineering-quality-observability/README.md) — Python validation checks, duplicate detection, quality reports, and pytest.
 
-**Core stack:** Snowflake | dbt | SQL | Python | REST APIs | Microservices | ETL/ELT | GitHub Actions | Docker
+**Core stack:** Snowflake | dbt | SQL | Python | REST APIs | Microservices | ETL/ELT | GitHub Actions | Airflow
 
 ## Selected Work
 
@@ -38,7 +39,7 @@ I build and work with data engineering solutions using **Snowflake, dbt, Python,
 
 ## Connect
 
-- **LinkedIn:** [Shivam Mathur](https://www.linkedin.com/in/shivam-mathur)
+- **LinkedIn:** [Shivam Mathur](https://www.linkedin.com/in/shivam-mathur-172751289)
 - **Email:** [shivam2002mathur@gmail.com](mailto:shivam2002mathur@gmail.com)
 
 ---
